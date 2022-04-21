@@ -1,0 +1,4 @@
+.env
+.qr*
+test.py
+__pycache__
