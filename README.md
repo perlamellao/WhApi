@@ -11,7 +11,7 @@ A simple api for working with WhatsappWeb
 
 ### TODO
 - [ ] Create the actual Api with flask
-- [ ] Read messages from any chat
+- [x] Read messages from any chat
 - [ ] Open new chat to send message
 - [ ] Render qr in terminal for completely cli interaction
 - [ ] Store WhaWeb session (in some way?)

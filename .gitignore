@@ -2,3 +2,4 @@
 .qr*
 test.py
 __pycache__
+*.log

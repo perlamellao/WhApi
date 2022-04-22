@@ -15,8 +15,9 @@ def InitMenu():
     return("""
 1. Initialize Whatsapp Driver           
 2. Login with QR
-3. Send message
-4. Close
+3. Send message to chat
+4. Read messages from chat
+5. Close Session
 
 >>> """)
 
@@ -64,13 +65,23 @@ if __name__ == "__main__":
                 time.sleep(1)
                 
         elif choice == 4:
+            if DriverInitialized:
+                os.system("clear")
+                chatName = input("Enter chat name: ")
+                wd.GetChatMsg(chatName)
+                time.sleep(10)
+            else:
+                print("Driver not initialized")
+                time.sleep(1)
+                
+        elif choice == 5:
             try:
                 wd.CloseSession()
                 time.sleep(3)
-                wd.close()
                 
             except:
                 pass
+            wd.close()
             
             os.system("clear")
             print("Closing and ending driver")
